@@ -23,8 +23,8 @@ RUN mkdir output-war && \
   jar xvf /src/target/*.war && \
   cd $OLDPWD
 
-RUN mkdir -p /assets/opt/apache-tomcat-${TOMCAT_VERSION}/webapps/ROOT/ && \
-  rsync -Pavz --delete output-war/ /assets/opt/apache-tomcat-${TOMCAT_VERSION}/webapps/ROOT/ && \
+RUN mkdir -p /assets/opt/apache-tomcat/webapps/ROOT/ && \
+  rsync -Pavz --delete output-war/ /assets/opt/apache-tomcat/webapps/ROOT/ && \
   rm /src
   
 EXPOSE 8009 8080
