@@ -32,7 +32,7 @@ public class DeviceManagementService {
 	}
 
 	public List<Device2> getMyDevices(String JWTTokenHeaderValue) {
-		String url = serviceUrl + "/devices";
+		String url = serviceUrl + "/devices?limit=0";
 		try {			
 			
 			HttpHeaders headers = new HttpHeaders();			
